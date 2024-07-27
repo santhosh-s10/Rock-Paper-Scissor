@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Rock Paper Scissors</title>
+</head>
+<body class="bg-[rgb(25,25,25)] text-white ml-10">
+    
+    <p class="font-bold text-3xl">Rock Paper Scissors</p>
+    <button onclick=" playGame('rock');" 
+     class="bg-green-400 px-4 py-1 bg-transparent border-solid ring-2 ring-white rounded-full w-28 h-28 ml-3 mt-3 ">
+     <img src="assets/rock-emoji.png" alt="rock-emoji" class="w-20 h-20"></button>
+
+
+    <!-- Paper Button -->
+
+    <button onclick=" playGame('paper');"
+    class="bg-green-400 px-4 py-1 bg-transparent border-solid ring-2 ring-white rounded-full w-28 h-28 ml-3 mt-3">
+    <img src="assets/paper-emoji.png" alt="paper-emoji" class="w-20 h-20"></button>
+    
+
+    <!-- Scissors Button -->
+    <button onclick=" playGame('scissors');"
+    class="bg-green-400 px-4 py-1 bg-transparent border-solid ring-2 ring-white rounded-full w-28 h-28 ml-3 mt-3">
+    <img src="assets/scissors-emoji.png" alt="scissors-emoji" class="w-20 h-20"></button>
+
+     <p class="js-result font-bold text-2xl pt-5"></p>
+     <p class="js-moves flex pt-5"></p>
+     <p class="js-score m-3"></p>
+
+
+     <!-- Reset Button -->
+     <button onclick="score.wins=0;
+     score.losses=0;
+     score.ties=0;
+     localStorage.removeItem('score');
+     updateScoreElement();"
+     class="bg-red-400 px-4 py-1 hover:bg-[rgb(25,25,25)] hover:text-red-400 duration-500 rounded">Reset Score</button>
+
+
+
+    <script src="./scripts/10-rock.js"></script>
+</body>
+</html>
